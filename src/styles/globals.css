@@ -1,0 +1,86 @@
+@import url("https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600&family=Roboto:wght@400;500&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    :root {
+        --first-color: 108, 172, 224;
+        --text-color-light: 138, 143, 147;
+        --gradient-color: linear-gradient(
+            180deg,
+            rgba(149, 187, 218, 0),
+            rgb(108, 172, 224)
+        );
+    }
+
+    .light-theme {
+        --title-color: 39, 41, 42;
+        --text-color: 69, 72, 74;
+        --body-color: 252, 252, 253;
+        --container-color: 242, 242, 243;
+        --icon-color: 138, 143, 147;
+        --icon-active-color: 69, 72, 74;
+    }
+
+    .dark-theme {
+        --title-color: 242, 242, 243;
+        --text-color: 162, 166, 169;
+        --body-color: 24, 26, 27;
+        --container-color: 29, 31, 32;
+        --icon-color: 162, 166, 169;
+        --icon-active-color: 242, 242, 243;
+    }
+
+    html {
+        -webkit-tap-highlight-color: transparent;
+        scroll-behavior: smooth;
+    }
+
+    .light-theme::-webkit-scrollbar {
+        width: 0.6rem;
+        border-radius: 0.5rem;
+        background-color: hsl(207, 4%, 75%);
+    }
+
+    .light-theme::-webkit-scrollbar-thumb {
+        border-radius: 0.5rem;
+        background-color: hsl(207, 4%, 65%);
+    }
+
+    .light-theme::-webkit-scrollbar-thumb:hover {
+        background-color: hsl(207, 4%, 55%);
+    }
+
+    .dark-theme::-webkit-scrollbar {
+        width: 0.6rem;
+        border-radius: 0.5rem;
+        background-color: hsl(207, 4%, 15%);
+    }
+
+    .dark-theme::-webkit-scrollbar-thumb {
+        border-radius: 0.5rem;
+        background-color: hsl(207, 4%, 25%);
+    }
+
+    .dark-theme::-webkit-scrollbar-thumb:hover {
+        background-color: hsl(207, 4%, 35%);
+    }
+}
+
+.swiper-pagination {
+    @apply absolute bottom-0 !important;
+}
+
+.swiper-pagination-bullet {
+    @apply w-2 rounded-full h-2 bg-text-light !important;
+}
+
+.swiper-pagination-bullet-active {
+    @apply bg-text !important;
+}
+
+.swiper-button-disabled {
+    @apply text-text-light !important;
+}
